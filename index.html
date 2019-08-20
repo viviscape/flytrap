@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Flytrap Website | Flytrap Marketing Framework</title>
+    <!--Boilerplate Basic Resources Begin ViviScape Original Recipe of Resources-->
+    <!--Bootstrap 4.0 CDN Goodies-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+    <!--Boilerplate Basic Resources End-->
+
+    <!--Copy BEGIN-->
+
+    <!--Flytrap JS SDK-->
+    <!--Will install moment if you do not already have it referenced.  Uses for formatting for other features within the SDK-->
+    <script src="https://cdn.ftgo.io/v1/fly.min.js"></script>
+
+    <!--Flytrap CDN BASE Styles-->
+    <link href="https://cdn.ftgo.io/v1/fly-form.css" rel="stylesheet" />
+
+    <!--Flytrap Example StylesStyles-->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!--Copy END-->
+
+   
+
+</head>
+
+<body>
+
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#https://www.getflytrap.com" target="_blank"><img
+                src="https://www.flytrapgo.com/images/FlyTrap_Logo.png" class="logo"></a>
+    </nav>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-brand mb-0 h1 text-light">Flytrap JS SDK Examples</span>
+    </nav>
+
+    <div class="container-fluid">
+
+
+
+        <h4>Getting Started</h4>
+        <p>The FlyTrap JS SDK is pretty simple to use. Listed below are the base CDN References to get started within your header section.</p>
+
+        <h5>FLYTRAPCDNJS</h4>
+        <div class="w-50">
+        <pre>
+        <code>
+        &lt;head&gt;
+        &lt;link href="https://cdn.ftgo.io/v1/fly-form.css" rel="stylesheet"/&gt;
+        &lt;script src="https://cdn.ftgo.io/v1/fly.min.js"&gt;&lt;/script&gt;
+        
+        ...
+        &lt;/head&gt;
+        </code>
+        </pre>
+    </div>
+        <div class="d-flex my-4">
+            <div class="w-5 pr-4">
+                <h4>FlyTrap Contact Form Example</h4>
+                <p>
+                    The Flytrap contact form allows for the ability to place contacts subscribed into a FlyTrap Contact
+                    list of your choice.
+                    These contact list can be used to send updates, announcments, and other types of communications
+                    within your funnel pages.
+
+                </p>
+            </div>
+            <div class="w-50">
+                <!--Flytrap Form Element for Contact form-->
+                <div id="flytrapcontact"></div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        //Initialize Components
+        fly.init({
+            appId: "eafe707a0f4508d6941e66fa912e1140",
+            customUrl: "",
+            textColor: "#454545",
+            showImages: true,
+        }).then(function (res) {
+            console.log("Successfully Loaded:", res);
+            if (res) {
+
+                fly.LoadForm("flytrapcontact", "FlyTrap Updates");
+
+            }
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.logo{
+    height:75px;
+}
+
+
+pre code {
+    background-color: #333;
+    border: 1px solid #676767;
+    display: block;
+    padding: 10px;
+    color:#fff;
+  }
