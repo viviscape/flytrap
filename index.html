@@ -30,15 +30,18 @@
     <!--Will install moment if you do not already have it referenced.  Uses for formatting for other features within the SDK-->
     <script src="https://cdn.ftgo.io/v1/fly.min.js"></script>
 
-    <!--Flytrap CDN BASE Styles-->
+    <!--Flytrap Forms CDN BASE Styles-->
     <link href="https://cdn.ftgo.io/v1/fly-form.css" rel="stylesheet" />
+
+    <!--Flytrap Albums CDN BASE Styles-->
+    <link href="https://cdn.ftgo.io/v1/fly-albums-horizontal.css" rel="stylesheet" />
 
     <!--Flytrap Example StylesStyles-->
     <link href="styles.css" rel="stylesheet" />
 
     <!--Copy END-->
 
-   
+
 
 </head>
 
@@ -55,16 +58,17 @@
         <span class="navbar-brand mb-0 h1 text-light">Flytrap JS SDK Examples</span>
     </nav>
 
-    <div class="container-fluid">
-
-
+    <div class="container-fluid my-1">
 
         <h4>Getting Started</h4>
-        <p>The FlyTrap JS SDK is pretty simple to use. Listed below are the base CDN References to get started within your header section.</p>
+        <p>The FlyTrap JS SDK is pretty simple to use. Listed below are the base CDN References to get started within
+            your header section.</p>
+
+
 
         <h5>FLYTRAPCDNJS</h4>
-        <div class="w-50">
-        <pre>
+            <div class="w-50">
+                <pre>
         <code>
         &lt;head&gt;
         &lt;link href="https://cdn.ftgo.io/v1/fly-form.css" rel="stylesheet"/&gt;
@@ -74,33 +78,36 @@
         &lt;/head&gt;
         </code>
         </pre>
-    </div>
-        <div class="d-flex my-4">
-            <div class="w-5 pr-4">
-                <h4>FlyTrap Contact Form Example</h4>
+                <h4>Staying Up to Date</h4>
                 <p>
-                    The Flytrap contact form allows for the ability to place contacts subscribed into a FlyTrap Contact
-                    list of your choice.
-                    These contact list can be used to send updates, announcments, and other types of communications
-                    within your funnel pages.
-
+                    Stay tuned as we expand this the examples of this page. Also subscribe to get developers updates. We
+                    periodically will send out
+                    notification for updates, tools, widgets.
+                    <br><br>
+                    <a href="https://www.getflytrap.com/developers#subscribe" target="_blank"
+                        class="btn btn-primary">Subscribe to the FlyTrap Developers</a>
                 </p>
+
             </div>
-            <div class="w-50">
-                <!--Flytrap Form Element for Contact form-->
-                <div id="flytrapcontact"></div>
-            </div>
-        </div>
+            <hr>
+            <div class="d-flex my-4">
+                <div class="w-5 pr-4">
+                    <h4>FlyTrap Contact Form Example</h4>
+                    <p>
+                        The Flytrap contact form allows for the ability to place contacts subscribed into a FlyTrap
+                        Contact
+                        list of your choice.
+                        These contact list can be used to send updates, announcments, and other types of communications
+                        within your funnel pages.
 
-    </div>
-
-    </div>
-
-
-
-
-
-    <script>
+                    </p>
+                    <div class="my-2">
+                        <a href="https://www.getflytrap.com/developers" target="_blank" class="btn btn-primary">Start
+                            Developing</a>
+                    </div>
+                    <pre>
+<code>
+    &lt;script&gt;
         //Initialize Components
         fly.init({
             appId: "eafe707a0f4508d6941e66fa912e1140",
@@ -110,17 +117,110 @@
         }).then(function (res) {
             console.log("Successfully Loaded:", res);
             if (res) {
-
-                fly.LoadForm("flytrapcontact", "FlyTrap Updates");
-
+    /*The "FlyTrap Demos is the Contact list that will be generated if it doesn't exist.  You can change his"*/
+                fly.LoadForm("flytrapcontact", "FlyTrap Demos");
             }
 
-        });
+        }); 
+        &lt;/script&gt;
+
+</code>
+                    </pre>
+
+                </div>
+                <div class="w-50 mx-auto">
+                    <!--Flytrap Form Element for Contact form-->
+                    <div id="flytrapcontact"></div>
+
+                    <script>
+                        //Initialize Components
+                        fly.init({
+                            appId: "eafe707a0f4508d6941e66fa912e1140",
+                            customUrl: "",
+                            textColor: "#454545",
+                            showImages: true,
+                        }).then(function (res) {
+                            console.log("Successfully Loaded:", res);
+                            if (res) {
+                                fly.LoadForm("flytrapcontact", "FlyTrap Updates");
+                            }
+                        });
+
+                    </script>
+
+
+                </div>
+
+
+            </div>
+            <hr>
+            <div class="d-flex my-4">
+                <div class="w-50 pr-4">
+                    <h4>FlyTrap Albums Example</h4>
+                    <p>
+                        You can create rich photo albums that are infused with backlinks and call to actions with photo
+                        albums. Albums can be manged from the
+                        FlyTrap Directories Management Portal or through the FlyTrap Rest API.
+
+                    </p>
+                    <div class="my-2">
+                        <a href="https://www.getflytrap.com/developers" target="_blank" class="btn btn-primary">Start
+                            Developing</a>
+                    </div>
+                    <!--Flytrap Albums Element for Contact form-->
+
+                    <div id="flyalbums"></div>
+                    <script>
+
+                        //ViviScape
+                        fly.init({
+                            appId: "19d97e99bb5608d402332011c048e14e",
+                            customUrl: "",
+                            textColor: "#454545",
+                            maxItems: 3,
+                            showDescriptions: true,
+                            showImages: true,
+                            showAlbumIds: false//show  album ids
+
+                        }).then(function (loaded) {
+                            //Refresh News
+                            fly.LoadAlbums();
+                        });
+
+                    </script>
+                </div>
+                <div class="w-50">
+                    <pre>
+<code>
+    &lt;script&gt;
+        //Initialize Components
+        fly.init({
+            appId: "eafe707a0f4508d6941e66fa912e1140",
+            customUrl: "",
+            textColor: "#454545",
+            showImages: true,
+        }).then(function (res) {
+            console.log("Successfully Loaded:", res);
+            if (res) {
+                fly.LoadForm("flytrapcontact", "FlyTrap Updates");
+            }
+        }); 
+
+        &lt;/script&gt;
+
+</code>
+    </pre>
+                </div>
+            </div>
+
+    </div>
+
+    </div>
 
 
 
 
-    </script>
+
 
 
 </body>

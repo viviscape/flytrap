@@ -10,3 +10,8 @@ pre code {
     padding: 10px;
     color:#fff;
   }
+
+
+  .fly-album-id{
+    display: none;
+  }
